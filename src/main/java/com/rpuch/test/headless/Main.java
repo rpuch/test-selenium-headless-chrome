@@ -20,7 +20,7 @@ public class Main {
         try {
             driver.navigate().to("https://example.com/");
             File file = driver.getScreenshotAs(OutputType.FILE);
-            Files.copy(file.toPath(), Paths.get("/tmp/screenshot.png"), StandardCopyOption.REPLACE_EXISTING);
+            Files.copy(file.toPath(), Paths.get("target/screenshot.png"), StandardCopyOption.REPLACE_EXISTING);
 
             // adding a delay to visually check whether there is a browser window
             Thread.sleep(1000);
